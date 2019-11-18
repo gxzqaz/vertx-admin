@@ -1,0 +1,8 @@
+{
+    "provider_class": "io.vertx.ext.jdbc.spi.impl.HikariCPDataSourceProvider",
+    "jdbcUrl": "jdbc:postgresql://127.0.0.1:5432/postgres",
+    "driverClassName": "org.postgresql.Driver",
+    "username": "postgres",
+    "password": "2wsxVFR_",
+    "maximumPoolSize": 20
+}

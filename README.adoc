@@ -1,0 +1,6 @@
+== 启动postgresql
+不知道为啥, 使用idea默认的连接进去, 查看的时区一直是utc, 但是用Navicat进去看就好的, 不过vertx的JsonObject里面的数据只支持一些基本类型, 如果用timestamp也没什么优势, 不如就用时间戳, 而且postgres也没有提供和mysql一样的更新函数, 要写trigger, 所以推荐使用bigint存储时间, 和时区就没关系了
+```shell
+docker run --name postgres12 -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=2wsxVFR_ -e TZ="Asia/Shanghai" -v postgres12ata:/var/lib/postgresql/data -p 5432:5432 -d postgres:12-alpine
+```
+java -jar target/maven-verticle-3.4.2-fat.jar -instances 8
